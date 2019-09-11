@@ -1,24 +1,7 @@
-/* function printNumbers(from, to) {
-    let current = from;
-
-    let timerId = setInterval(function() {
-        countdown.textContent = current;
-        if (current === to) {
-            clearInterval(timerId);
-        }
-        current++;
-    }, 1000);
-}
-
-printNumbers(5, 10); */
-
-// let timeNowString = timeNow.toString();
-// countdown.textContent = timeNowString;
-
 let countdown = document.querySelector('.countdown');
 
-setInterval(function() {
-    let timeSet = new Date('January 1, 2020').getTime();
+var timer = setInterval(function() {
+    let timeSet = new Date('January 1, 2020 ').getTime();
     let timeNow = new Date(Date.now()).getTime();
 
     let timeDiff = timeSet - timeNow;
@@ -41,6 +24,7 @@ setInterval(function() {
     days = doubleDigit(days);
 
     countdown.textContent = days + ':' + hours + ':' + minutes + ':' + seconds;
+    if (timeDiff <= 0) {
+        clearInterval(timer);
+    }
 }, 1000);
-
-
