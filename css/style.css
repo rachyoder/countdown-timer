@@ -1,3 +1,38 @@
+/*Basic Page Setup*/
+
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background-color: #333333
+}
+
+body {
+    font-size: 10px;
+}
+
+/*Font Settings*/
+h1, h2, p {
+    color: white;
+    text-align: center;
+}
+h1 {
+    font-size: 4em;
+}
+h2 {
+    font-size: 2em;
+    margin-bottom: 2em;
+}
+
 p.countdown {
     font-family: 'VT323',monospace;
+    font-size: 3em;
+    border: 0.2em solid white;
+    background-color: #5a5959;
+    padding : 1.2em;
+    margin-left: 8em;
+    margin-right: 8em;
+    border-radius: 1em;
 }
